@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+
+	<hibernate_sequences sequence_name="person"
+		sequence_next_hi_value="1" />
+
+	<hibernate_sequences sequence_name="address"
+		sequence_next_hi_value="1" />
+
+	<hibernate_sequences sequence_name="payment"
+		sequence_next_hi_value="1" />
+
+	<item id="1" category="1" description="Daal" name="Daal" />
+	<item id="2" category="1" description="Wange/Bringle" name="Wange/Bringle" />
+	<item id="3" category="1" description="Panner" name="Panner" />
+	<item id="4" category="1" description="Chole" name="Chole" />
+	<item id="5" category="2" description="Plain Rice" name="Plain Rice" />
+	<item id="6" category="2" description="Jeera Rice" name="Jeera Rice" />
+
+
+	<address id="1" street="Omkar Nagar" city="0" state="0"
+		country="0" pin_code="410507" lattitude="40.303" longitude="-76.8862" />
+	<address id="2" street="Vatan Nagar" city="0" state="0"
+		country="0" pin_code="410508" lattitude="30.3795" longitude="-91.1671" />
+	<address id="3" street="Yashwant Nagar" city="0" state="0"
+		country="0" pin_code="410509" lattitude="30.0877" longitude="-89.8462" />
+	<address id="4" street="Viman Nagar" city="0" state="0"
+		country="0" pin_code="410510" lattitude="42.37" longitude="-71.1773" />
+
+
+	<owner id="1" first_name="Pawan" last_name="Upadhay" email_id="Pawan@gmail.com"
+		mobile_no="86-(277)854-9497" owner_address="1" gender="0" />
+
+	<vendor_account id="1" is_provide_custom_service="1"
+		manager_mob_no="46-(431)891-2271" penalty_percentage="25"
+		registration_date="2015-07-05" subscribe_threshold="360000"
+		un_subscribe_threshold="360000" />
+	<vendor_account id="2" is_provide_custom_service="1"
+		manager_mob_no="46-(431)891-2271" penalty_percentage="35"
+		registration_date="2015-08-05" subscribe_threshold="360000"
+		un_subscribe_threshold="360000" />
+
+	<vendor id="1" mess_name="Pawan Mess" reception_no="9898989898"
+		email_id="pawanmess@gamil.com" owner="1" vendor_address="2"
+		vendor_account="1" />
+	<vendor id="2" mess_name="Prasad Mess" reception_no="9898989898"
+		email_id="prasadmess@gamil.com" owner="1" vendor_address="4"
+		vendor_account="2" />
+
+
+	<vendor_item id="1" cost="20" rating="4" unit="0" item="1"
+		vendor_account="1" />
+	<vendor_item id="2" cost="20" rating="5" unit="0" item="2"
+		vendor_account="1" />
+	<vendor_item id="3" cost="25" rating="3" unit="0" item="3"
+		vendor_account="1" />
+	<vendor_item id="4" cost="20" rating="3" unit="0" item="4"
+		vendor_account="1" />
+	<vendor_item id="5" cost="15" rating="5" unit="0" item="5"
+		vendor_account="1" />
+
+	<meal_item id="1" count="1" vendor_item="1" />
+	<meal_item id="2" count="1" vendor_item="2" />
+	<meal_item id="3" count="1" vendor_item="3" />
+	<meal_item id="4" count="2" vendor_item="1" />
+
+	<meal id="1" name="RicePlate" description="RicePlate"
+		is_vegeterian="0" vendor_account="1" />
+	<meal id="2" name="RicePlate" description="RicePlate"
+		is_vegeterian="0" vendor_account="1" />
+
+	<meal_meal_items meal="1" meal_items="1" />
+	<meal_meal_items meal="1" meal_items="2" />
+	<meal_meal_items meal="1" meal_items="3" />
+
+
+	<mess_deck_offering id="1" capacity_of_members="50"
+		cost="60" effective_from="2015-08-05" effective_till="2015-08-05"
+		start_time="12:00:00" end_time="14:00:00" is_customizable="0"
+		is_unlimited="0" is_vegeterian="0" penalty_percentage="25"
+		service_type="1" subscribe_threshold="120000" un_subscribe_threshold="120000"
+		vendor_account="1" />
+
+	<mess_deck_offering_instance id="1"
+		capacity_of_members="50" service_date="2015-08-05" meal="1"
+		mess_deck_service="1" />
+
+
+	<customer_account id="11" balance="1000"
+		customer_account_status="0" />
+	<customer_account id="12" balance="2000"
+		customer_account_status="0" />
+	<customer_account id="13" balance="1000"
+		customer_account_status="0" />
+
+
+
+	<customer id="11" first_name="Diana" last_name="Alvarez"
+		email_id="dalvarez0@uiuc.edu" gender="0" customer_account="11"
+		mobile_no="48-(421)775-9855" />
+	<customer id="12" first_name="Nancy" last_name="Stewart"
+		email_id="nstewart1@google.it" gender="0" customer_account="12"
+		mobile_no="86-(483)313-3202" />
+	<customer id="13" first_name="Theresa" last_name="Reed"
+		email_id="treed2@msu.edu" gender="1" customer_account="13"
+		mobile_no="63-(571)602-2498" />
+
+
+	<customer_payement id="1" amount="200" timestamp="2015-08-05"
+		customer_account="11" payment="1" />
+
+	<hard_cash_payment id="1" amount="200" recived_by="Esbjörn"
+		customer_account="11" vendor_account="1" time_stamp="2015-08-05" />
+
+
+
+
+
+
+
+</dataset>

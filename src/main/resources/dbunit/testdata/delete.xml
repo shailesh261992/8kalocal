@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<hibernate_sequences />
+	<owner />
+	<vendor_account />
+	<vendor></vendor>
+	<address></address>
+
+
+
+
+	<customer_account></customer_account>
+	<customer></customer>
+	<customer_payement></customer_payement>
+	<hard_cash_payment></hard_cash_payment>
+
+
+	<item />
+	<vendor_item />
+	<meal_item></meal_item>
+	<meal></meal>
+	<meal_meal_items></meal_meal_items>
+	<mess_deck_offering />
+	<mess_deck_offering_instance></mess_deck_offering_instance>
+
+
+
+</dataset>
