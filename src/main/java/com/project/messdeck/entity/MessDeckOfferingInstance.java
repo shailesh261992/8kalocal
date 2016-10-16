@@ -3,11 +3,14 @@ package com.project.messdeck.entity;
 import java.time.LocalDate;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -17,6 +20,7 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import com.project.messdeck.serializer.LocalDateAttributeConverter;
 
 @Entity
+@Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "mess_deck_service", "service_date" }) })
 public class MessDeckOfferingInstance extends AbstractEntity {
 	@ManyToOne(optional = false)
 	private MessDeckOffering messDeckService;
@@ -27,6 +31,7 @@ public class MessDeckOfferingInstance extends AbstractEntity {
 	@JsonDeserialize(using = LocalDateDeserializer.class)
 	@JsonSerialize(using = LocalDateSerializer.class)
 	@Convert(converter = LocalDateAttributeConverter.class)
+	@Column(name = "service_date")
 	private LocalDate serviceDate;
 
 	@JsonIgnore

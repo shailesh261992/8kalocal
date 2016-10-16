@@ -4,4 +4,6 @@ import com.project.messdeck.entity.CustomerOrder;
 
 public interface CustomerOrderService extends CRUDService<CustomerOrder> {
 
+	public CustomerOrder readDetails(Long id);
+
 }

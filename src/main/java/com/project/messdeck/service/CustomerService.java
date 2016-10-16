@@ -8,5 +8,6 @@ public interface CustomerService extends CRUDService<Customer> {
 	public Customer readDetails(Long id);
 
 	public CustomerAccount fetchCustomerAccount(Long id);
+	
 
 }

@@ -1,6 +1,6 @@
-insert into hibernate_sequences (sequence_name, sequence_next_hi_value) values ('person', '1');
-insert into hibernate_sequences (sequence_name, sequence_next_hi_value) values ('address', '1');
-insert into hibernate_sequences (sequence_name, sequence_next_hi_value) values ('payment', '1');
+insert into hibernate_sequences (sequence_name, sequence_next_hi_value) values ('person', 1);
+insert into hibernate_sequences (sequence_name, sequence_next_hi_value) values ('address', 1);
+insert into hibernate_sequences (sequence_name, sequence_next_hi_value) values ('payment', 1);
 
 insert into item (id, category, description, name) values (1, '1', 'Chole', 'Chole');
 insert into item (id, category, description, name) values (2, '1', 'Wange/Brinjle', 'Wange/Brinjle');
@@ -107,4 +107,43 @@ insert into mess_deck_offering (id, capacity_of_members, cost, effective_from, e
 insert into mess_deck_offering (id, capacity_of_members, cost, effective_from, effective_till, start_time, end_time, is_customizable, is_unlimited, is_vegeterian, penalty_percentage, service_type, subscribe_threshold, un_subscribe_threshold, vendor_account) values (5, '50', '60', '2015-08-05', '2099-08-05', '12:00:00', '14:00:00', 0, 0, 0, '25', '1', '120000', '120000', '2');
 insert into mess_deck_offering (id, capacity_of_members, cost, effective_from, effective_till, start_time, end_time, is_customizable, is_unlimited, is_vegeterian, penalty_percentage, service_type, subscribe_threshold, un_subscribe_threshold, vendor_account) values (6, '50', '60', '2015-08-05', '2099-08-05', '20:00:00', '22:00:00', 0, 0, 0, '25', '2', '120000', '120000', '2');
 
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (1, '50', '2015-08-05', 1, 1);
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (2, '50', '2015-08-06', 2, 1);
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (3, '50', '2015-08-07', 3, 1);
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (4, '50', '2015-08-08', 1, 1);
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (5, '50', '2015-08-09', 2, 1);
 
+
+
+insert into customer_account (id, balance, customer_account_status) values (1001, '450', 0);
+insert into customer_account (id, balance, customer_account_status) values (1002, '230', 0);
+insert into customer_account (id, balance, customer_account_status) values (1003, '177', 0);
+insert into customer_account (id, balance, customer_account_status) values (1004, '177', 0);
+insert into customer_account (id, balance, customer_account_status) values (1005, '450', 0);
+
+
+
+insert into customer (id, first_name, last_name, email_id, gender, customer_account, mobile_no) values (1001, 'Judy', 'Chavez', 'jchavez0@marriott.com', 1, 1001, '9296248187');
+insert into customer (id, first_name, last_name, email_id, gender, customer_account, mobile_no) values (1002, 'Nicole', 'Ferguson', 'nferguson1@artisteer.com', 0, 1002, '9296248187');
+insert into customer (id, first_name, last_name, email_id, gender, customer_account, mobile_no) values (1003, 'Denise', 'Clark', 'dclark2@joomla.org', 0, 1003, '9296248187');
+insert into customer (id, first_name, last_name, email_id, gender, customer_account, mobile_no) values (1004, 'Elizabeth', 'Sanchez', 'esanchez3@china.com.cn', 1, 1004, '9296248187');
+insert into customer (id, first_name, last_name, email_id, gender, customer_account, mobile_no) values (1005, 'Cynthia', 'Crawford', 'ccrawford4@patch.com', 1, 1005, '9296248187');
+
+
+insert into hard_cash_payment (id, amount, recived_by, customer_account, vendor_account, time_stamp) values (1, 450, 'Parag', 1001, 1, '2015-08-05');
+insert into hard_cash_payment (id, amount, recived_by, customer_account, vendor_account, time_stamp) values (2, 230, 'Parag', 1002, 1, '2015-08-05');
+insert into hard_cash_payment (id, amount, recived_by, customer_account, vendor_account, time_stamp) values (3, 177, 'Parag', 1003, 1, '2015-08-05');
+insert into hard_cash_payment (id, amount, recived_by, customer_account, vendor_account, time_stamp) values (4, 177, 'Parag', 1004, 1, '2015-08-05');
+insert into hard_cash_payment (id, amount, recived_by, customer_account, vendor_account, time_stamp) values (5, 450, 'Parag', 1005, 1, '2015-08-05');
+
+insert into customer_payement (id, amount, timestamp, customer_account, payment) values (1, 450, '2015-08-05', 1001, 1);
+insert into customer_payement (id, amount, timestamp, customer_account, payment) values (2, 230, '2015-08-05', 1002, 2);
+insert into customer_payement (id, amount, timestamp, customer_account, payment) values (3, 177, '2015-08-05', 1003, 3);
+insert into customer_payement (id, amount, timestamp, customer_account, payment) values (4, 177, '2015-08-05', 1004, 4);
+insert into customer_payement (id, amount, timestamp, customer_account, payment) values (5, 450, '2015-08-05', 1005, 5);
+
+insert into customer_order (id, is_customized, status, total_cost, customer_account, mess_deck_service_instance) values (1, 0, '3', '80', '1001', 1);
+insert into customer_order_line_items (customer_order, vendor_item, count, cost) values ('1', 9, '1', '20');
+insert into customer_order_line_items (customer_order, vendor_item, count, cost) values ('1', 16, '1', '20');
+insert into customer_order_line_items (customer_order, vendor_item, count, cost) values ('1', 11, '1', '20');
+insert into customer_order_line_items (customer_order, vendor_item, count, cost) values ('1', 1, '1', '20');

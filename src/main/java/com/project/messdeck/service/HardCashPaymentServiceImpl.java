@@ -39,7 +39,7 @@ public class HardCashPaymentServiceImpl implements HardCashPaymentService {
 
 	@Override
 	public HardCashPayment readSummary(Long id) {
-		return repository.findOne(id);
+		return getResorce(repository, id);
 	}
 
 	@ValidateWithOval

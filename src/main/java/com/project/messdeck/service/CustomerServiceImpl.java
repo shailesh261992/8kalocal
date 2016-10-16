@@ -28,7 +28,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public Customer readSummary(Long id) {
-		return repository.findOne(id);
+		return getResorce(repository, id);
 	}
 
 	@ValidateWithOval
@@ -47,14 +47,14 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public Customer readDetails(Long id) {
-		Customer customer = this.readSummary(id);
+		Customer customer = getResorce(repository, id);
 		customer.getCustomerAccount().getBalance();
 		return customer;
 	}
 
 	@Override
 	public CustomerAccount fetchCustomerAccount(Long id) {
-		Customer customer = this.readSummary(id);
+		Customer customer = getResorce(repository, id);
 		CustomerAccount customerAccount = customer.getCustomerAccount();
 		customerAccount.getBalance();
 		return customerAccount;

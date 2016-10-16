@@ -1,7 +1,7 @@
 package com.project.messdeck.entity;
 
 import javax.persistence.Embeddable;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 @Embeddable
 public class LineItem {
@@ -10,7 +10,7 @@ public class LineItem {
 	 * We keep count to maximum to indicate unlimited food itrm
 	 * 
 	 */
-	@OneToOne(optional = false)
+	@ManyToOne(optional = false)
 	private VendorItem vendorItem;
 	private int count;
 	private double cost;

@@ -5,18 +5,34 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonView;
+import com.project.messdeck.Views;
 
 @Entity
 public class CustomerOrder extends AbstractEntity {
-	@ManyToOne(optional = false)
+
+	@JsonView(Views.Details.class)
+	@ManyToOne(optional = false, fetch = FetchType.LAZY)
 	private CustomerAccount customerAccount;
-	@ManyToOne(optional = false)
+
+	@JsonView(Views.Details.class)
+	@ManyToOne(optional = false, fetch = FetchType.LAZY)
 	private MessDeckOfferingInstance messDeckServiceInstance;
+
 	@ElementCollection
+	@JsonView(Views.Summary.class)
 	private List<LineItem> lineItems;
+
+	@JsonView(Views.Summary.class)
 	private boolean isCustomized;
+
+	@JsonView(Views.Summary.class)
 	private double totalCost;
+
+	@JsonView(Views.Summary.class)
 	@Column(nullable = false)
 	private OrderStatus status;
 
