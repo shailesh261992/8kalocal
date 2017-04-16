@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mess">
+<head>
+
+    <style>
+
+        .day {
+            width: 13%;
+            border: solid #cec5de 1px;
+            display: inline-flex;;
+            text-align: end;
+            flex-direction: column;
+            height: auto;
+            min-height: 100px;
+        }
+
+        .serviceInstance {
+            padding: 5%;
+            margin: 1%;
+            background-color: #a2d09d;
+        }
+
+        .calender {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dataFetch.js"></script>
+    <script src="js/calender.js"></script>
+</head>
+<body ng-controller="myCtrl">
+<div class="calender">
+    <div class="day" ng-repeat="d in month.days">
+        {{d.date.getDate()}}
+    <span ng-repeat="s in d.availableServices" class="serviceInstance">
+        <label ng-click="showDetails(s)">{{s.messDeckService.serviceType;}}</label>
+        <input type="checkbox" ng-model ="s.isSubscribed" ng-change="updateUserSubscription(s)" >
+    </span>
+
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

@@ -5,6 +5,7 @@ import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,6 +20,7 @@ import com.project.messdeck.service.VendorAccountService;
 
 @RestController
 @RequestMapping(value = "/vendoraccount")
+@CrossOrigin
 public class VendorAccountController {
 	@Autowired
 	private VendorAccountService service;
@@ -37,6 +39,7 @@ public class VendorAccountController {
 
 	}
 
+	@CrossOrigin()
 	@JsonView(Views.Summary.class)
 	@RequestMapping(value = "/{vendorAccountNumber}/messdeckofferings", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<MessDeckOffering> fetchAllMessDeckOfferings(@PathVariable long vendorAccountNumber) {

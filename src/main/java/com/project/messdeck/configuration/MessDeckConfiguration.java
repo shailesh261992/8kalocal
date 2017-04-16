@@ -28,21 +28,21 @@ import com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module;
 @ComponentScan(basePackages = { "com.project.messdeck.repository", "com.project.messdeck.controller",
 		"com.project.messdeck.service" })
 @EnableTransactionManagement()
-@Import({ StaticResourceConfiguration.class, SecurityConfig.class, AOPConfiguration.class, OvalConfiguration.class })
+@Import({ StaticResourceConfiguration.class, SecurityConfig.class, AOPConfiguration.class, OvalConfiguration.class, WebConfig.class })
 @EnableAspectJAutoProxy
 @EnableJpaRepositories(basePackages = { "com.project.messdeck.repository" })
 @EnableAutoConfiguration
 @EntityScan(basePackages = { "com.project.messdeck.entity" })
 public class MessDeckConfiguration extends WebMvcConfigurerAdapter {
 
-	@Bean
-	public ViewResolver viewResolver() {
-		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-		viewResolver.setPrefix("/WEB-INF/views/");
-		viewResolver.setSuffix(".jsp");
-
-		return viewResolver;
-	}
+//	@Bean
+//	public ViewResolver viewResolver() {
+//		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+//		viewResolver.setPrefix("/WEB-INF/views/");
+//		viewResolver.setSuffix(".jsp");
+//
+//		return viewResolver;
+//	}
 
 	@Bean
 	@Scope(scopeName = "prototype")

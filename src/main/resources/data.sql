@@ -113,6 +113,45 @@ insert into mess_deck_offering_instance (id, capacity_of_members, service_date, 
 insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (4, '50', '2015-08-08', 1, 1);
 insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (5, '50', '2015-08-09', 2, 1);
 
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (9, '50', '2017-03-23', 3, 3);
+
+
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (6, '50', '2017-03-24', 1, 1);
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (7, '50', '2017-03-24', 2, 2);
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (8, '50', '2017-03-24', 3, 3);
+
+
+
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (12, '50', '2017-03-25', 1, 1);
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (13, '50', '2017-03-25', 2, 2);
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (14, '50', '2017-03-25', 3, 3);
+
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (15, '50', '2017-03-26', 1, 1);
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (16, '50', '2017-03-26', 2, 2);
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (17, '50', '2017-03-26', 3, 3);
+
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (18, '50', '2017-03-27', 1, 1);
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (19, '50', '2017-03-27', 2, 2);
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (20, '50', '2017-03-27', 3, 3);
+
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (21, '50', '2017-03-28', 1, 1);
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (22, '50', '2017-03-28', 2, 2);
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (23, '50', '2017-03-28', 3, 3);
+
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (24, '50', '2017-03-29', 1, 1);
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (25, '50', '2017-03-29', 2, 2);
+insert into mess_deck_offering_instance (id, capacity_of_members, service_date, meal, mess_deck_service) values (26, '50', '2017-03-29', 3, 3);
+
+
+
+
+
+
+
+
+
+
+
 
 
 insert into customer_account (id, balance, customer_account_status) values (1001, '450', 0);

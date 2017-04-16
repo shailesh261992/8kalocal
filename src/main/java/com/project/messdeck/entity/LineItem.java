@@ -12,6 +12,7 @@ public class LineItem {
 	 */
 	@ManyToOne(optional = false)
 	private VendorItem vendorItem;
+	
 	private int count;
 	private double cost;
 
